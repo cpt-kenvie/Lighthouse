@@ -1,0 +1,80 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  /* 弹性布局,让页面元素水平+垂直居中 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* 设置body高度为100%的窗口高度 */
+  height: 100vh;
+  /* 背景设置渐变色 */
+  background-image: linear-gradient(200deg, #5ee7df, #b490ca);
+  perspective: 1000px;
+}
+.card {
+  /* 相对定位 */
+  position: relative;
+  width: 300px;
+  height: 400px;
+  /* 圆角 */
+  border-radius: 30px;
+  /* 鼠标移到元素上光标变成小手 */
+  cursor: pointer;
+  background-color: #fff;
+  /* 盒子阴影 */
+  box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.1);
+  /* 给父元素添加一个3D盒子熟悉,等到子元素到背面了,这个元素是添加到父元素的,但是影响的是子元素 */
+  transform-style: preserve-3d;
+  /* 给卡片添加默认动画 */
+  animation: rotate-reverse 1.2s cubic-bezier(0.66, -0.47, 0.33, 1.5);
+}
+
+/* 设置鼠标移入卡片时执行的动画 */
+.card:hover {
+  animation: rotate 1.2s cubic-bezier(0.66, -0.47, 0.33, 1.5);
+}
+
+.front,
+.back {
+  /* 绝对定位 子元素是绝对定位,父元素需要相对定位 */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* 弹性布局,让垂直陈列 */
+  display: flex;
+  flex-direction: column;
+  /* 子元素垂直陈列,再让子元素水平居中 */
+  align-items: center;
+  /* 平均分配每一个子元素 */
+  justify-content: space-around;
+  font-size: 20px;
+  background-color: #fff;
+  border-radius: 30px;
+  backface-visibility: hidden;
+}
+
+.back {
+  transform: rotateY(180deg);
+}
+
+/* 定义旋转动画 */
+@keyframes rotate {
+  0% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: rotateY(180deg);
+  }
+}
+@keyframes rotate-reverse {
+  0% {
+    transform: rotateY(180deg);
+  }
+  100% {
+    transform: rotateY(0deg);
+  }
+}

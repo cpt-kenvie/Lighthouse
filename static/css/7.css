@@ -1,0 +1,195 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  /* 从左到右渐变 */
+  background: linear-gradient(to right, #ed6aa0, #ec8c69);
+  height: 100vh;
+}
+
+.menu-toggler {
+  position: absolute;
+  display: block;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 40px;
+  height: 40px;
+  z-index: 2;
+  /* 设置 div 元素的不透明级别 */
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* :hover选择鼠标指针浮动在其上的元素，并设置其样式 */
+.menu-toggler:hover + label,
+.menu-toggler:hover + label::before,
+.menu-toggler:hover + label::after {
+  background: #fff;
+}
+
+.menu-toggler:checked + label {
+  /* 透明背景，也就是去掉了被
+    如果一个元素覆盖在另外一个元素之上，而你想显示下面的元素，
+    这时你就需要把上面这个元素的background设置为transparent */
+  background: transparent;
+}
+
+.menu-toggler:checked + label::before,
+.menu-toggler:checked + label::after {
+  top: 0;
+  width: 40px;
+  transform-origin: 50% 50%;
+}
+
+.menu-toggler:checked + label::before {
+  transform: rotate(45deg);
+}
+
+.menu-toggler:checked + label::after {
+  transform: rotate(-45deg);
+}
+
+.menu-toggler:checked ~ ul .menu-item {
+  opacity: 1;
+}
+
+.menu-toggler:checked ~ ul .menu-item:nth-child(1) {
+  /* transform旋转 div 元素 */
+  transform: rotate(0deg) translateX(-110px);
+}
+
+.menu-toggler:checked ~ ul .menu-item:nth-child(2) {
+  /* transform旋转 div 元素 */
+  transform: rotate(60deg) translateX(-110px);
+}
+
+.menu-toggler:checked ~ ul .menu-item:nth-child(3) {
+  /* transform旋转 div 元素 */
+  transform: rotate(120deg) translateX(-110px);
+}
+
+.menu-toggler:checked ~ ul .menu-item:nth-child(4) {
+  /* transform旋转 div 元素 */
+  transform: rotate(180deg) translateX(-110px);
+}
+
+.menu-toggler:checked ~ ul .menu-item:nth-child(5) {
+  /* transform旋转 div 元素 */
+  transform: rotate(240deg) translateX(-110px);
+}
+
+.menu-toggler:checked ~ ul .menu-item:nth-child(6) {
+  /* transform旋转 div 元素 */
+  transform: rotate(300deg) translateX(-110px);
+}
+
+.menu-toggler:checked ~ ul .menu-item a {
+  pointer-events: auto;
+}
+
+.menu-toggler + label {
+  width: 40px;
+  height: 5px;
+  display: block;
+  z-index: 1;
+  border-radius: 2.5px;
+  background: rgba(255, 255, 255, 0.7);
+  transition: transform 0.5s, top 0.5s;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.menu-toggler + label::before,
+.menu-toggler + label::after {
+  width: 40px;
+  height: 5px;
+  display: block;
+  z-index: 1;
+  border-radius: 2.5px;
+  background: rgba(255, 255, 255, 0.7);
+  transition: transform 0.5s, top 0.5s;
+  content: "";
+  position: absolute;
+  left: 0;
+}
+
+.menu-toggler + label::before {
+  top: 10px;
+}
+
+.menu-toggler + label::after {
+  top: -10px;
+}
+
+.menu-item:nth-child(1) a {
+  transform: rotate(0deg);
+}
+
+.menu-item:nth-child(2) a {
+  transform: rotate(-60deg);
+}
+
+.menu-item:nth-child(3) a {
+  transform: rotate(-120deg);
+}
+
+.menu-item:nth-child(4) a {
+  transform: rotate(-180deg);
+}
+
+.menu-item:nth-child(5) a {
+  transform: rotate(-240deg);
+}
+
+.menu-item:nth-child(6) a {
+  transform: rotate(-30deg);
+}
+
+.menu-item {
+  position: absolute;
+  display: block;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 80px;
+  height: 80px;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.menu-item a {
+  /* 此元素将显示为块级元素，
+    此元素前后会带有换行符。 */
+  display: block;
+  /* 浏览器会将父盒子的宽度赋值给他*/
+  width: inherit;
+  height: inherit;
+  line-height: 80px;
+  color: rgba(255, 255, 255, 0.7);
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  text-align: center;
+  /* 把a标签的下划线去掉 */
+  text-decoration: none;
+  font-size: 40px;
+  /* pointer-events 属性定义元素是否对指针事件做出反应 */
+  pointer-events: none;
+  transition: 0.2s;
+}
+
+.menu-item a:hover {
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.3);
+  color: #fff;
+  background: rgba(255, 255, 255, 0.3);
+  font-size: 45px;
+}
