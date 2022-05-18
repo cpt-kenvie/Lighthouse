@@ -786,12 +786,6 @@ var comm_list = [
 ];
 
 var _hmt = _hmt || [];
-!(function () {
-  var e = document.createElement("script");
-  e.src = "https://hm.baidu.com/hm.js?eefffbea1301794bea738c231cd900fd";
-  var t = document.getElementsByTagName("script")[0];
-  t.parentNode.insertBefore(e, t);
-})();
 !(function (o) {
   "use strict";
 
