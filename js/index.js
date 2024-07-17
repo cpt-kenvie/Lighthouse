@@ -2,8 +2,8 @@
   let n = !1;
   if (
     ("function" == typeof define && define.amd && (define(e), (n = !0)),
-    "object" == typeof exports && ((module.exports = e()), (n = !0)),
-    !n)
+      "object" == typeof exports && ((module.exports = e()), (n = !0)),
+      !n)
   ) {
     const o = window.Cookies,
       t = (window.Cookies = e());
@@ -37,13 +37,13 @@
           i.expires = i.expires ? i.expires.toUTCString() : "";
           try {
             (c = JSON.stringify(r)), /^[{\[]/.test(c) && (r = c);
-          } catch (e) {}
+          } catch (e) { }
           (r = o.write
             ? o.write(r, n)
             : encodeURIComponent(r + "").replace(
-                /%(23|24|26|2B|3A|3C|3E|3D|2F|3F|40|5B|5D|5E|60|7B|7D|7C)/g,
-                decodeURIComponent
-              )),
+              /%(23|24|26|2B|3A|3C|3E|3D|2F|3F|40|5B|5D|5E|60|7B|7D|7C)/g,
+              decodeURIComponent
+            )),
             (n = (n = (n = encodeURIComponent(n + "")).replace(
               /%(23|24|26|2B|5E|60|7C)/g,
               decodeURIComponent
@@ -56,8 +56,8 @@
         n || (c = {});
         for (
           var p = document.cookie ? document.cookie.split("; ") : [],
-            d = /(%[0-9A-Z]{2})+/g,
-            u = 0;
+          d = /(%[0-9A-Z]{2})+/g,
+          u = 0;
           u < p.length;
           u++
         ) {
@@ -70,17 +70,17 @@
               ((C = o.read
                 ? o.read(C, m)
                 : o(C, m) || C.replace(d, decodeURIComponent)),
-              this.json)
+                this.json)
             )
               try {
                 C = JSON.parse(C);
-              } catch (e) {}
+              } catch (e) { }
             if (n === m) {
               c = C;
               break;
             }
             n || (c[m] = C);
-          } catch (e) {}
+          } catch (e) { }
         }
         return c;
       }
@@ -103,7 +103,7 @@
     );
   }
 
-  return n(function () {});
+  return n(function () { });
 });
 
 var comm_list = [
@@ -146,71 +146,6 @@ var comm_list = [
           { name: "凤凰网", url: "http://www.ifeng.com/" },
           { name: "人民网", url: "http://www.people.com.cn/" },
           { name: "新华网", url: "http://xinhuanet.com/" },
-        ],
-      },
-
-      {
-        tag: "购物",
-        link: [
-          { name: "淘宝", url: "https://www.taobao.com/" },
-          { name: "京东", url: "https://www.jd.com/" },
-          { name: "拼多多", url: "https://youhui.pinduoduo.com/" },
-          { name: "苏宁易购", url: "https://www.suning.com/" },
-          { name: "网易严选", url: "https://you.163.com/" },
-          { name: "小米商城", url: "https://www.mi.com/" },
-          { name: "什么值得买", url: "https://www.smzdm.com/" },
-        ],
-      },
-
-      {
-        tag: "视频",
-        link: [
-          { name: "优酷", url: "https://www.youku.com/" },
-          { name: "爱奇艺", url: "https://www.iqiyi.com/" },
-          { name: "腾讯视频", url: "https://v.qq.com/" },
-          { name: "哔哩哔哩", url: "https://www.bilibili.com/" },
-          { name: "YouTube", url: "https://www.youtube.com/" },
-          { name: "斗鱼直播", url: "https://www.douyu.com/" },
-          { name: "虎牙直播", url: "https://www.huya.com/" },
-        ],
-      },
-
-      {
-        tag: "工作",
-        link: [
-          { name: "领英", url: "https://cn.linkedin.com/" },
-          { name: "拉勾网", url: "https://www.lagou.com/" },
-          { name: "智联招聘", url: "https://www.zhaopin.com/" },
-          { name: "前程无忧", url: "https://www.51job.com/" },
-          { name: "应届生", url: "http://www.yingjiesheng.com/" },
-          { name: "脉脉", url: "https://maimai.cn/" },
-          { name: "酷工作", url: "https://www.v2ex.com/?tab=jobs" },
-        ],
-      },
-
-      {
-        tag: "生活",
-        link: [
-          { name: "美团", url: "https://www.meituan.com/" },
-          { name: "大众点评", url: "https://www.dianping.com/" },
-          { name: "携程", url: "https://www.ctrip.com/" },
-          { name: "去哪儿", url: "https://www.qunar.com/" },
-          { name: "飞猪", url: "https://www.alitrip.com/" },
-          { name: "12306", url: "https://kyfw.12306.cn/otn/index/init" },
-          { name: "马蜂窝", url: "https://www.mafengwo.cn/" },
-        ],
-      },
-
-      {
-        tag: "便捷",
-        link: [
-          { name: "词典翻译", url: "https://fanyi.baidu.com/" },
-          { name: "天气预报", url: "http://www.weather.com.cn/live/" },
-          { name: "快递查询", url: "https://www.kuaidi100.com/" },
-          { name: "在线转换", url: "https://cn.office-converter.com/" },
-          { name: "临时网盘", url: "https://send.firefox.com/" },
-          { name: "网页微信", url: "https://wx.qq.com/" },
-          { name: "QQ邮箱", url: "https://mail.qq.com/" },
         ],
       },
     ],
@@ -797,24 +732,24 @@ var _hmt = _hmt || [];
       l = o(t).attr("class");
     if (
       (o(t).addClass("active"),
-      o.each(comm_list, function (t, i) {
-        l == i.slug &&
-          ((e = i.list),
-          o.each(e, function (t, i) {
-            (a += "<ul><li>" + i.tag + "</li>"),
-              (n = i.link),
-              o.each(n, function (o, t) {
-                a +=
-                  '<li><a href="' +
-                  t.url +
-                  '" target="_blank">' +
-                  t.name +
-                  "</a></li>";
-              }),
-              (a += "</ul>");
-          }));
-      }),
-      o(".work-link").find(".tab span:first").hasClass("active") &&
+        o.each(comm_list, function (t, i) {
+          l == i.slug &&
+            ((e = i.list),
+              o.each(e, function (t, i) {
+                (a += "<ul><li>" + i.tag + "</li>"),
+                  (n = i.link),
+                  o.each(n, function (o, t) {
+                    a +=
+                      '<li><a href="' +
+                      t.url +
+                      '" target="_blank">' +
+                      t.name +
+                      "</a></li>";
+                  }),
+                  (a += "</ul>");
+              }));
+        }),
+        o(".work-link").find(".tab span:first").hasClass("active") &&
         "1" == i("schl"))
     ) {
       var s = "assets/data/univ/" + i("univ") + ".js";
@@ -880,8 +815,8 @@ var _hmt = _hmt || [];
   function a(t) {
     if (
       (o(t).addClass("active").siblings(".active").removeClass("active"),
-      o(".search-hidden").remove(),
-      o(t).hasClass("baidu"))
+        o(".search-hidden").remove(),
+        o(t).hasClass("baidu"))
     )
       o(".search-form").attr("action", "https://www.baidu.com/s"),
         o(".search-keyword").attr({
@@ -972,12 +907,12 @@ var _hmt = _hmt || [];
             o.each(univ_list, function (a, l) {
               t == l.id &&
                 ((e = l.univs),
-                (n = ""),
-                o.each(e, function (o, t) {
-                  n += "<option value=" + t.id + ">" + t.name + "</option>";
-                }),
-                o("#setting-univ select").html(n),
-                i && o("#setting-univ select").val(i));
+                  (n = ""),
+                  o.each(e, function (o, t) {
+                    n += "<option value=" + t.id + ">" + t.name + "</option>";
+                  }),
+                  o("#setting-univ select").html(n),
+                  i && o("#setting-univ select").val(i));
             });
           }
 
@@ -992,7 +927,7 @@ var _hmt = _hmt || [];
             e("bkgd", o("#setting-bkgd select").val()),
               e("schl", o("#setting-schl select").val()),
               o("#setting-univ select").val() &&
-                (e("prov", o("#setting-prov select").val()),
+              (e("prov", o("#setting-prov select").val()),
                 e("univ", o("#setting-univ select").val())),
               t(o(".work-link").find(".tab span:first"));
           });

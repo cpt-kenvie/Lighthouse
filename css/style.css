@@ -261,7 +261,7 @@ select {
   color: #333;
   background: #fff;
   border-radius: 0;
-  -webkit-appearance: none;
+  appearance: none;
 }
 
 img,
@@ -278,7 +278,7 @@ textarea {
   font-family: inherit;
   font-size: inherit;
   border-radius: 0;
-  -webkit-appearance: none;
+  appearance: none;
 }
 
 textarea {
@@ -710,13 +710,12 @@ img {
   margin-right: 0;
 }
 
-.work-link,
 .work-link .tab span {
-  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
 }
 
 .work-link {
-  min-height: 500px;
+  min-height: 300px;
   font-size: 16px;
   opacity: 0;
   padding: 40px 0 45px;
@@ -1010,7 +1009,6 @@ img {
   font-family: "fontello";
   font-style: normal;
   font-weight: 400;
-  speak: none;
   display: inline-block;
   text-decoration: inherit;
   width: 1em;
