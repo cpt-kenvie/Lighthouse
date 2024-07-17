@@ -1,0 +1,152 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+/* body标签 */
+body {
+  /* 设置body高度为100%窗口高度 */
+  /* vh跟100%的区别,
+    当元素没有内容的时候,设置100%元素不会被撑开,此时高度就是0
+    写设置vh的时候.元素就会被撑开,与屏幕一致 */
+  height: 100vh;
+  /* 弹性盒子模型 */
+  display: flex;
+  /* 把咱们所有写在body标签里面的代码居中显示 */
+  /* 上面定义了flex盒子,这里就直接用盒子模型定位 */
+  /* 居中排列 */
+  justify-content: center;
+  /* 元素位于容器的中心,会将body代码里写的元素,居中展示 */
+  align-items: center;
+  /* 背景颜色 */
+  background-color: #1d1928;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* 灵活的项目将垂直显示，正如一个列一样。 */
+  flex-direction: column;
+  width: 350px;
+  height: 450px;
+  /* 向 div 元素添加圆角边框 */
+  border-radius: 20px;
+  background-color: #4471a3;
+  /* 盒子阴影 */
+  box-shadow: 15px 15px 10px rgba(33, 45, 58, 0.3);
+  /* 溢出隐藏 如果这个元素超过给定的宽度和高度,超出的部分就会隐藏*/
+  overflow: hidden;
+  /* 生成相对定位的元素，相对于其正常位置进行定位。比如left20 他就会向left添加20像素 */
+  position: relative;
+}
+
+.container form {
+  width: 350px;
+  height: 200px;
+  display: flex;
+  /* 均匀排列每个元素每个元素周围分配相同的空间 */
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+  /* 层叠效果 z-index:1;就是在平面的上面一层 */
+  z-index: 1;
+}
+
+.container form .tbx {
+  width: 250px;
+  height: 40px;
+  /* 使outline属性无效，使绘制于元素周围的一条线无效 */
+  outline: none;
+  /*边框不渲染*/
+  border: none;
+  color: #fff;
+  font-size: 15px;
+}
+
+.container form .tbx::placeholder {
+  color: rgb(236, 231, 231);
+  font-size: 16px;
+}
+
+.container form .sub {
+  width: 250px;
+  height: 40px;
+  outline: none;
+  border: 1px solid #fff;
+  border-radius: 20px;
+  /* 字母之间的间距 */
+  letter-spacing: 5px;
+  color: #fff;
+  background: none;
+  /*鼠标放上就有光标*/
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.container h1 {
+  color: #ecf0f1;
+  font-size: 50px;
+  letter-spacing: 5px;
+  font-weight: 100;
+  /*文字阴影*/
+  text-shadow: 5px 5px 5px rgba(33, 45, 58, 0.3);
+  z-index: 1;
+}
+
+/* 设置鼠标进入的样式 */
+.container .in {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: #d64e4e;
+  transform: translate(-50%, -50%);
+  /* 使用out动画 持续0.5秒 缓出的时间函数 停留在最后一帧 */
+  animation: in 0.5s ease-out forwards;
+}
+
+/* 设置鼠标离开的样式 */
+.container .out {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 1200px;
+  height: 1200px;
+  border-radius: 50%;
+  background: #d64e4e;
+  transform: translate(-50%, -50%);
+  /* 使用out动画 持续0.5秒 缓出的时间函数 停留在最后一帧 */
+  animation: out 0.5s ease-out forwards;
+}
+
+/* 动画 */
+/* 设置鼠标进入时,元素的动画 */
+@keyframes in {
+  /* 初始关键帧 */
+  0% {
+    width: 0;
+    height: 0;
+  }
+  /* 结束关键帧 */
+  100% {
+    width: 1200px;
+    height: 1200px;
+  }
+}
+
+/* 设置鼠标离开时,元素的动画 */
+@keyframes out {
+  /* 初始关键帧 */
+  0% {
+    width: 1200px;
+    height: 1200px;
+  }
+  /* 结束关键帧 */
+  100% {
+    width: 0;
+    height: 0;
+  }
+}
