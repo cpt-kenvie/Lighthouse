@@ -111,33 +111,33 @@ var comm_list = [
     slug: "common",
     list: [
       {
-        tag: "热门",
+        tag: "K文",
         link: [
           { name: "博客", url: "https://kenvie.com/" },
           { name: "网盘", url: "https://ali.kenvie.com/" },
           { name: "图床", url: "https://img.kenvie.com/" },
-          { name: "中国色", url: "https://color.kenvie.com/" },
-          { name: "在线ps", url: "https://ps.gaoding.com/" },
+          { name: "中国色", url: "https://color.kenvie.com" },
+          { name: "命令", url: "https://cmd.kenvie.com" },
           { name: "域名邮箱", url: "https://qy.163.com/login/?from=ym" },
           { name: "阿里云盘", url: "https://www.aliyundrive.com/drive" },
         ],
       },
 
       {
-        tag: "社交",
+        tag: "便携",
         link: [
-          { name: "微博", url: "https://www.weibo.com/" },
-          { name: "贴吧", url: "https://tieba.baidu.com/" },
-          { name: "知乎", url: "https://www.zhihu.com/" },
-          { name: "豆瓣", url: "https://www.douban.com/" },
-          { name: "V2EX", url: "https://www.v2ex.com/" },
-          { name: "简书", url: "https://www.jianshu.com/" },
-          { name: "Twitter", url: "https://twitter.com/" },
+          { name: "在线ps", url: "https://ps.gaoding.com/" },
+          { name: "ChatGPT", url: "https://chatgpt.com/" },
+          { name: "TheB.AI", url: "https://beta.theb.ai/home" },
+          { name: "文心一言", url: "https://yiyan.baidu.com/" },
+          { name: "BiliBili", url: "https://www.bilibili.com/" },
+          { name: "测速", url: "https://www.speedtest.cn/" },
+          { name: "国外测速", url: "https://www.speedtest.net/" },
+
         ],
       },
-
       {
-        tag: "资讯",
+        tag: "工具",
         link: [
           { name: "网易", url: "https://www.163.com/" },
           { name: "腾讯", url: "http://www.qq.com/" },
