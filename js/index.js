@@ -708,10 +708,7 @@ var comm_list = [
           { name: "Google", url: "https://design.google/" },
           { name: "Microsoft", url: "https://www.microsoft.com/design/" },
           { name: "Material", url: "https://material.io/" },
-          {
-            name: "Android",
-            url: "https://developer.android.google.cn/design/",
-          },
+          { name: "Android",url: "https://developer.android.google.cn/design/",},
           { name: "ScreenSize", url: "http://screensiz.es/phone" },
           { name: "WeUI", url: "https://weui.io/" },
         ],
