@@ -21,37 +21,37 @@
     }
     return n;
   }
-  $(document).ready(function() {
+  $(document).ready(function () {
     // 引入comm_list.json
-    $.getJSON('comm_list.json', function(comm_list) {
+    $.getJSON('comm_list.json', function (comm_list) {
       // 使用comm_list执行原有的操作
       function t(t) {
         $(".work-link").find(".tab span.active").removeClass("active");
         var e, n, a = "", l = $(t).attr("class");
         $(t).addClass("active");
-        
-        $.each(comm_list, function(t, i) {
+
+        $.each(comm_list, function (t, i) {
           if (l == i.slug) {
             e = i.list;
-            $.each(e, function(t, i) {
+            $.each(e, function (t, i) {
               a += "<ul><li>" + i.tag + "</li>";
               n = i.link;
-              $.each(n, function(o, t) {
+              $.each(n, function (o, t) {
                 a += '<li><a href="' + t.url + '" target="_blank">' + t.name + "</a></li>";
               });
               a += "</ul>";
             });
           }
         });
-  
+
         $(".work-link").css("opacity", "1").find(".info").hide().html(a).fadeIn(200);
       }
-      
+
       // 初始化tab
       t($(".work-link").find(".tab span:first"));
-      
+
       // 处理点击事件
-      $(".work-link .tab").on("click", "span", function() {
+      $(".work-link .tab").on("click", "span", function () {
         t($(this));
       });
     });
